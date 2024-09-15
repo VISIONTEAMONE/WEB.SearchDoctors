@@ -8,33 +8,52 @@ import Image from "next/image";
 const category = [
   {
     index: 1,
-    category: 'Дантист',
-    image: '/dentist.png', // ссылка на изображение дантиста
+    data:
+    {
+      category: 'Дантист',
+      image: '/category_image/dentist.png'
+    }
+    // ссылка на изображение дантиста
   },
   {
     index: 2,
-    category: 'Кардиолог',
-    image: '/cardiologist.png', // ссылка на изображение кардиолога
+    data:
+    {
+      category: 'Кардиолог',
+      image: '/category_image/cardiologist.png', // ссылка на изображение кардиолога
+    }
   },
   {
     index: 3,
-    category: 'Ортопед',
-    image: '/orthopedist.png', // ссылка на изображение ортопеда
+    data:
+    {
+      category: 'Ортопед',
+      image: '/category_image/orthopedist.png', // ссылка на изображение ортопеда
+    }
   },
   {
     index: 4,
-    category: 'Невролог',
-    image: '/neurosurgeon.png', // ссылка на изображение невролога
+    data:
+    {
+      category: 'Невролог',
+      image: '/category_image/neurosurgeon.png', // ссылка на изображение невролога
+    }
   },
   {
     index: 5,
-    category: 'Лор',
-    image: '/otolaryngologist.png', // ссылка на изображение ЛОРа
+    data:
+    {
+      category: 'Лор',
+      image: '/category_image/otolaryngologist.png', // ссылка на изображение ЛОРа
+    }
   },
   {
     index: 6,
-    category: 'Главный доктор',
-    image: '/general_doctor.png', 
+    data:
+    {
+      category: 'Главный доктор',
+      image: '/category_image/general_doctor.png',
+    }
   }
 ];
 
@@ -61,12 +80,11 @@ function CategorySearch() {
       <div className="mt-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {category.map((item, index) => (
           <div key={index} className='flex flex-col text-center items-center p-5 bg-blue-50 m-2 rounded-lg gap-2 hover:scale-110 transition-all ease-in-out cursor-pointer' >
-            <Image src={item.image}
+            <Image src={item.data.image}
               alt='icon'
               width={40}
               height={40} />
-            <label className="text-green-600 text-sm">{item.category}</label>
-
+            <label className="text-green-600 text-sm">{item.data.category}</label>
           </div>
         ))}
       </div>
