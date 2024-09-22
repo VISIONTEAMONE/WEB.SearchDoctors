@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="bg-gray-100">
       <div className="mx-auto max-w-5xl justify-center text-center flex flex-col items-center px-4 py-16 sm:px-6 lg:px-8">
         <Image src="/logo.svg" alt="logo" width={200} height={200} />
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
@@ -11,7 +11,7 @@ function Footer() {
           consequuntur amet culpa cum itaque neque.
         </p>
 
-        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 font-semibold">
           <li>
             <a
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -191,4 +191,3 @@ function Footer() {
 }
 
 export default Footer;
-
